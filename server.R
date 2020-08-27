@@ -103,7 +103,7 @@ function(input, output, session){
   output$distractorInstruction <- renderText('In this task, you will have five minutes to answer as many questions as possible. 
                                              \n Press the start button when you are ready to begin.')
   output$distractorQuestion <- renderText({
-    paste(c(multQs1[rv$question+1], '*', multQs2[rv$question+1]), collapse = "  ")
+    paste(c(multQs1[rv$question], '*', multQs2[rv$question]), collapse = "  ")
   })
   
   observeEvent(input$questionSubmit, {
